@@ -1,7 +1,7 @@
 class Main inherits IO{
-    main():object{
+    main():Object{
         {
-            out_string("Hello,world!")
+            out_string("Hello,world!");
         }
     };
 };
