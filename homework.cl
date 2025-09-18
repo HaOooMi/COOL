@@ -81,11 +81,25 @@ class Stack inherits IO {
     
     print() : Object {
         {
-            if isEmpty() then
-                out_string("Stack: [empty]")
+            if isEmpty() then {
+                out_string("Stack: [empty]");
+            }
             else {
                 out_string("Stack (top to bottom): ");
-                out_int(top.getData());
+                let current : StackNode <- top in
+                let remaining : Int <- size in
+                while not remaining = 0 loop
+                    {
+                        out_int(current.getData());
+                        remaining <- remaining - 1;
+                        current <- current.getNext();
+                        if not remaining = 0 then
+                            out_string(" -> ")
+                        else
+                            0
+                        fi;
+                    }
+                pool;
             }
             fi;
             out_string("\n");
