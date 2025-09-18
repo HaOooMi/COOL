@@ -46,5 +46,3 @@ Test 6: Final State
 Is empty: false
 Stack (top to bottom): 50
 Final size: 3
-
-=== All Stack Tests Completed Successfully! ===

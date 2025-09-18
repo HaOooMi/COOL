@@ -1,4 +1,3 @@
-
 class StackNode {
     data : Int;
     next : StackNode;
@@ -34,7 +33,6 @@ class Stack inherits IO {
         }
     };
     
-    (* Push: Add element to top of stack *)
     push(item : Int) : Object {
         let newNode : StackNode <- (new StackNode).init(item) in
         {
@@ -49,7 +47,6 @@ class Stack inherits IO {
         }
     };
     
-    (* Pop: Remove and return top element *)
     pop() : Int {
         if isEmpty() then {
             out_string("Error: Cannot pop from empty stack\n");
@@ -67,7 +64,6 @@ class Stack inherits IO {
         fi
     };
     
-    (* Peek: Return top element without removing *)
     peek() : Int {
         if isEmpty() then {
             out_string("Error: Cannot peek empty stack\n");
@@ -79,12 +75,10 @@ class Stack inherits IO {
         fi
     };
     
-    (* Check if stack is empty *)
     isEmpty() : Bool {
         size = 0
     };
     
-    (* Print all stack elements from top to bottom *)
     print() : Object {
         {
             if isEmpty() then
@@ -98,7 +92,6 @@ class Stack inherits IO {
         }
     };
     
-    (* Get current stack size *)
     getSize() : Int {
         size
     };
@@ -107,8 +100,6 @@ class Stack inherits IO {
 class Main inherits IO {
     main() : Object {
         {
-            out_string("=== COOL Stack Implementation Test ===\n\n");
-            
             let stack : Stack <- (new Stack).init() in
             {
                 -- Test 1: Empty stack operations
@@ -185,7 +176,6 @@ class Main inherits IO {
                 out_int(stack.getSize());
                 out_string("\n\n");
                 
-                out_string("=== All Stack Tests Completed Successfully! ===\n");
             };
         }
     };
