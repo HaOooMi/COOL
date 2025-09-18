@@ -1,8 +1,3 @@
-(* COOL Stack Implementation
-   Author: HaOooMi
-   Date: 2025-09-17
-   Description: Complete stack (LIFO) data structure with all required operations
-*)
 
 class StackNode {
     data : Int;
